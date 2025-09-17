@@ -51,7 +51,8 @@ createCollectable("max",1050,50,1,1);
     // TODO 4 - Create Cannons
 createCannon("right", 800,0);
 createCannon("top", 400,800);
-createCannon("top",800,800)
+createCannon("top",800,800);
+createCannon("bottom",950,650)
     
     
     //////////////////////////////////
