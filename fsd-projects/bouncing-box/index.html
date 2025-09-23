@@ -50,8 +50,8 @@
         });
 
         // Every 50 milliseconds, call the update Function (see below)
-        setInterval(update, 50);
-
+        setInterval(update, 25);
+        setInterval(updates, 25);
         // Every time the box is clicked, call the handleBoxClick Function (see below)
         box.on("click", handleBoxClick);
 
@@ -71,9 +71,9 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
- var positionX = 0;
- var points =0;
-var speed = 10;
+var positionX = 0;
+var points =0;
+var speed = 1;
 var positionY = 0;
 var speedY = 5;
 
@@ -84,16 +84,24 @@ var speedY = 5;
          */
         function update() {
           moveBoxTo(positionX, positionY);
-        
+        var randNum = Math.random() * 1920;
+        var randNumY = Math.random() * 1080;
  positionX = positionX + speed;
    if (positionX > boardWidth)  speed *=-1   
 if (positionX < 0 ) speed *=-1
 
-    positionY = positionY + speedY;
-    if (positionY > boardHeight) speed *=-1
-if (positionY < 5) speed *=-1
+changeBoxText(points)
+
+ positionY = positionY + speedY;
+     if (positionY > boardHeight) speedY *=-1
+if (positionY < 0) speedY *=-1
         }
 
+function updates() {
+
+
+
+}
         /**
          * This Function will be called each time the box is clicked.
          * Each time it is called, it should perform each of the following actions:
@@ -102,11 +110,13 @@ if (positionY < 5) speed *=-1
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-          speed =3 * points +10;;
-          points++;
-           positionX =0;
-           positionY = 0;
-changeBoxText(points)
+        points++;
+        speed =1 * points +10;
+       
+        speedY =2 * points +10;
+        positionX = randNum;
+positionY =randNumY;
+
 
 
 
