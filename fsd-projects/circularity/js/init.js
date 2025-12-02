@@ -94,7 +94,9 @@ var circles = [];
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-        
+            
+                    if (circle.x > canvas.width) {
+        circle.x = 0;
     }
       if (circle.x < 0) {
         circle.x = canvas.width;
