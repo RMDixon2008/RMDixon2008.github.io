@@ -94,9 +94,7 @@ var circles = [];
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            game.checkCirclePosition = function (circle) {
-                    if (circle.x > canvas.width) {
-        circle.x = 0;
+        
     }
       if (circle.x < 0) {
         circle.x = canvas.width;
@@ -106,7 +104,7 @@ var circles = [];
       if (circle.y > canvas.height) {
         circle.y = 0;
     }
-};
+
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
